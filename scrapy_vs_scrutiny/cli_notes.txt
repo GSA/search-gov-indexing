@@ -1,0 +1,8 @@
+# Command to run spider:
+scrapy runspider 'spider_name'.py -o 'output_file_path'.'csv/json'
+
+# Command to generate Scrapy project
+scrapy startproject 'project_name'
+
+# Command to generate CrawlSpider boilerplate
+scrapy genspider -t crawl 'spider_name' 'allowed_domain'
