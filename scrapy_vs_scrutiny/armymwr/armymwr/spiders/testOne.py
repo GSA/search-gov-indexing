@@ -8,8 +8,7 @@ class TestoneSpider(CrawlSpider):
     allowed_domains = ["armymwr.com"]
     start_urls = ["https://www.armymwr.com/"]
 
-    rules = (Rule(LinkExtractor(allow = (), deny = "calendar", unique = True), callback="parse_item", follow=True),
-             )
+    rules = (Rule(LinkExtractor(allow = (), deny = ["calendar", "location-contact"],unique = True), callback="parse_item", follow=True),)
 
     def parse_item(self, response):
         yield {
