@@ -1,0 +1,91 @@
+LOG_ONE:
+    -It just doesn't work? no URLs scraped
+    2023-07-18 09:31:21 [scrapy.utils.log] INFO: Scrapy 2.9.0 started (bot: get_smart_about_drugs)
+2023-07-18 09:31:21 [scrapy.utils.log] INFO: Versions: lxml 4.9.2.0, libxml2 2.9.13, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.11.4 (main, Jun 20 2023, 17:23:00) [Clang 14.0.3 (clang-1403.0.22.14.1)], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.1, Platform macOS-13.0.1-arm64-arm-64bit
+2023-07-18 09:31:21 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 5,
+ 'BOT_NAME': 'get_smart_about_drugs',
+ 'DOWNLOAD_DELAY': 0.2,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'HTTPCACHE_ENABLED': True,
+ 'NEWSPIDER_MODULE': 'get_smart_about_drugs.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_LOADER_WARN_ONLY': True,
+ 'SPIDER_MODULES': ['get_smart_about_drugs.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2023-07-18 09:31:21 [asyncio] DEBUG: Using selector: KqueueSelector
+2023-07-18 09:31:21 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-07-18 09:31:21 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-07-18 09:31:21 [scrapy.extensions.telnet] INFO: Telnet Password: 04901f7e60adeda3
+2023-07-18 09:31:21 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2023-07-18 09:31:21 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats',
+ 'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware']
+2023-07-18 09:31:21 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-07-18 09:31:21 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2023-07-18 09:31:21 [scrapy.core.engine] INFO: Spider opened
+2023-07-18 09:31:21 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-07-18 09:31:21 [scrapy.extensions.httpcache] DEBUG: Using filesystem cache storage in /Users/davidyao/Coding/gsa/search-gov-indexing-spider/scrapy_vs_scrutiny/scrapy_projects/get_smart_about_drugs/.scrapy/httpcache
+2023-07-18 09:31:21 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-07-18 09:31:21 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://getsmartaboutdrugs.gov/robots.txt> (referer: None) ['cached']
+2023-07-18 09:31:21 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://getsmartaboutdrugs.gov> (referer: None) ['cached']
+2023-07-18 09:31:21 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://www.getsmartaboutdrugs.gov/robots.txt> (referer: None) ['cached']
+2023-07-18 09:31:21 [scrapy.core.engine] DEBUG: Crawled (403) <GET https://www.getsmartaboutdrugs.gov/drugs> (referer: None)
+2023-07-18 09:31:21 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://getsmartaboutdrugs.gov>: HTTP status code is not handled or not allowed
+2023-07-18 09:31:21 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.getsmartaboutdrugs.gov/drugs>: HTTP status code is not handled or not allowed
+2023-07-18 09:31:21 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-07-18 09:31:21 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 921,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 2173,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/403': 4,
+ 'elapsed_time_seconds': 0.173461,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 7, 18, 13, 31, 21, 697846),
+ 'httpcache/firsthand': 1,
+ 'httpcache/hit': 3,
+ 'httpcache/miss': 1,
+ 'httpcache/store': 1,
+ 'httperror/response_ignored_count': 2,
+ 'httperror/response_ignored_status_count/403': 2,
+ 'log_count/DEBUG': 8,
+ 'log_count/INFO': 12,
+ 'memusage/max': 65650688,
+ 'memusage/startup': 65650688,
+ 'response_received_count': 4,
+ 'robotstxt/request_count': 2,
+ 'robotstxt/response_count': 2,
+ 'robotstxt/response_status_count/403': 2,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2023, 7, 18, 13, 31, 21, 524385)}
+2023-07-18 09:31:21 [scrapy.core.engine] INFO: Spider closed (finished)
