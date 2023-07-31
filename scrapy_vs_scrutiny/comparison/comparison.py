@@ -3,7 +3,8 @@ import difflib
 import urllib.parse
 import re
 from file_to_set import *
-from comparison_prints import *
+from comparison_functions import *
+import pandas as pd
 
 # to run, enter at the prompt: `python3 comparison.py`
 
@@ -30,12 +31,27 @@ text_gaps = ['test',
              'veteran_affairs'
              ]
 
-with open("results.txt", "w") as file:
-    for i in range(0, len(scrapy_paths)):
-        scrapy_urls = csv_to_set(scrapy_paths[i])
-        scrutiny_urls = txt_to_set(scrutiny_paths[i])
-        print('___________________________________________\n' + text_gaps[i] + ' results:')
-        make_comparisons(scrapy_urls, scrutiny_urls)
+for i in range(0, len(scrapy_paths)):
+    scrapy_urls = csv_to_set(scrapy_paths[i])
+    scrutiny_urls = txt_to_set(scrutiny_paths[i])
+    url_sets = make_comparisons(scrapy_urls, scrutiny_urls)
+    with open('processed/' + str(text_gaps[i]) + '.csv', 'w', newline='') as csvfile:
+        # Create a CSV writer object
+        writer = csv.writer(csvfile, delimiter=',')
+        writer.writerow(pd.Series(list(url_sets[0])))
+        writer.writerow(pd.Series(list(url_sets[1])))
+        writer.writerow(pd.Series(list(url_sets[2])))
+    csvfile.close()
+    """
+    df = pd.DataFrame()
+    df['Scrutiny Exclusive'] = pd.Series(list(url_sets[0]))
+    df['Scrapy Exclusive'] = pd.Series(list(url_sets[1]))
+    df['Common'] = pd.Series(list(url_sets[2]))
+    print(df)
+    """
+
+
+
 
 
 
