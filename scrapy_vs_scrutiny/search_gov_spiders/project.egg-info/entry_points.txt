@@ -1,2 +1,0 @@
-[scrapy]
-settings = search_gov_spiders.settings
