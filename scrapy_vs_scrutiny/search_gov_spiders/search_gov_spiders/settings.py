@@ -94,7 +94,7 @@ TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
 FEEDS = { 
-    'scrapy_urls/%(name)s/%(name)s_%(time)s.csv': {
+    'scrapy_urls/%(name)s/%(name)s_%(time)s.txt': {
         'format': 'csv',
         }
 }
