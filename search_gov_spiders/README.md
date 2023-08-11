@@ -8,7 +8,7 @@
 ## Setup and Use
 
 ### Option 1: straight from command-line
-1. Navigate to *search-gov-indexing-spider/scrapy_vs_scrutiny/search_gov_spiders/search_gov_spiders/spiders*
+1. Navigate to *search-gov-indexing-spider/search_gov_spiders/search_gov_spiders/spiders*
 2. Enter one of two following commands:
 
     * This command will output the yielded URLs in the destination and file format specified in the “FEEDS” variable of the  *../settings.py* file:
@@ -26,17 +26,17 @@
     *       $ pip install scrapyd
     *       $ pip install git+https://github.com/scrapy/scrapyd-client.git
 
-2. Next, navigate to *search-gov-indexing-spider/scrapy_vs_scrutiny/search_gov_spiders/scrapyd_files* and start the server :
+2. Next, navigate to *search-gov-indexing-spider/search_gov_spiders/scrapyd_files* and start the server :
     
         $ scrapyd 
     * Note: the repository where you start the server is arbitrary. It's simply where the logs and Scrapy project FEED destination will be.
 
-3. Navigate to *search-gov-indexing-spider/scrapy_vs_scrutiny/search_gov_spiders* and run this command to eggify the Scrapy project and deploy it to the Scrapyd server.:
+3. Navigate to *search-gov-indexing-spider/search_gov_spiders* and run this command to eggify the Scrapy project and deploy it to the Scrapyd server:
     
         $ scrapyd-deploy default
 
 
-    * Note: This will simply deploy it to a local Scrapyd server. To add custom deployment endpoints, you navigate to the *search-gov-indexing-spider/scrapy_vs_scrutiny/search_gov_spiders/scrapy.cfg* file and add or customize endpoints. 
+    * Note: This will simply deploy it to a local Scrapyd server. To add custom deployment endpoints, you navigate to the *search-gov-indexing-spider/search_gov_spiders/scrapy.cfg* file and add or customize endpoints. 
 
         For instance, if you wanted local and production endpoints:
 
@@ -72,4 +72,14 @@
 
 ## Adding new spiders
 
-1.  
+1.  Navigate to anywhere within the */search_gov_spiders* repository and run this command:
+
+        $ scrapy genspider -t crawl <spider_name> "<spider_starting_domain>"
+
+2. Open the */search_gov_spiders/search_gov_spiders/spiders/boilerplate.py* file and replace the lines of the generated spider with the lines of the boilerplate spider as dictated in the boilerplate file.
+
+3. Modify the `rules` in the new spider as needed. Here's the [scrapy rules documentation](https://docs.scrapy.org/en/latest/topics/spiders.html#crawling-rules) for the specifics.
+
+4. To update the Scrapyd server with the new spider, run: 
+        
+        $ scrapyd-deploy <default or endpoint_name> 

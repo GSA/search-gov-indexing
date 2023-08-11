@@ -44,3 +44,4 @@
 
 /search_gov_spiders/scrapy_urls
 
+/search_gov_spiders/scrapyd_files/*
