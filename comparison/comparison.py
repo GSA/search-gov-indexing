@@ -2,7 +2,6 @@ import csv
 import difflib
 import urllib.parse
 import re
-from file_to_set import *
 from comparison_functions import *
 import pandas as pd
 

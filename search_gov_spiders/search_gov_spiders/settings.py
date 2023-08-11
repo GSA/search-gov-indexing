@@ -52,7 +52,7 @@ DOWNLOAD_DELAY = 0.2
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "armymwr.middlewares.ArmymwrDownloaderMiddleware": 543,
+#    "search_gov_spiders.middlewares.SearchGovSpidersDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -64,7 +64,7 @@ DOWNLOAD_DELAY = 0.2
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    "armymwr.pipelines.ArmymwrPipeline": 300,
+#    "search_gov_spiders.pipelines.SearchGovSpidersPipeline": 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
