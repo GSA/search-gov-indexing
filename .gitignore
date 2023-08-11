@@ -1,47 +1,49 @@
-/search_gov_spiders/.scrapy
+/spider-foundational-work/search_gov_spiders/.scrapy
 
-/comparison/__pycache__
+/spider-foundational-work/scrutiny_vs_scrapy_comparison/__pycache__
 
-/comparison/processed
+/spider-foundational-work/scrutiny_vs_scrapy_comparison/processed
 
-/comparison/scrutiny_urls/processed
+/spider-foundational-work/scrutiny_vs_scrapy_comparison/scrutiny_urls/processed
 
-/search_gov_spiders/build
+/spider-foundational-work/search_gov_spiders/build
 
-/search_gov_spiders/dbs
+/spider-foundational-work/search_gov_spiders/dbs
 
-/search_gov_spiders/eggs
+/spider-foundational-work/search_gov_spiders/eggs
 
-/search_gov_spiders/logs
+/spider-foundational-work/search_gov_spiders/logs
 
-/search_gov_spiders/project.egg-info
+/spider-foundational-work/search_gov_spiders/project.egg-info
 
-/search_gov_spiders/search_gov_spiders/__pycache__
+/spider-foundational-work/spider-foundational-work/search_gov_spiders/search_gov_spiders/__pycache__
 
-/search_gov_spiders/search_gov_spiders/scrapy_urls
+/spider-foundational-work/search_gov_spiders/search_gov_spiders/scrapy_urls
 
-/search_gov_spiders/search_gov_spiders/spider_logs
+/spider-foundational-work/search_gov_spiders/search_gov_spiders/spider_logs
 
-/search_gov_spiders/search_gov_spiders/spiders/dbs
+/spider-foundational-work/search_gov_spiders/search_gov_spiders/spiders/dbs
 
-/search_gov_spiders/search_gov_spiders/spiders/eggs
+/spider-foundational-work/search_gov_spiders/search_gov_spiders/spiders/eggs
 
-/search_gov_spiders/search_gov_spiders/spiders/twistd.pid
+/spider-foundational-work/search_gov_spiders/search_gov_spiders/spiders/twistd.pid
 
-/search_gov_spiders/search_gov_spiders/spiders/__pycache__
+/spider-foundational-work/search_gov_spiders/search_gov_spiders/spiders/__pycache__
 
-/search_gov_spiders/search_gov_spiders/spiders/dbs
+/spider-foundational-work/search_gov_spiders/search_gov_spiders/spiders/dbs
 
-/search_gov_spiders/search_gov_spiders/spiders/eggs
+/spider-foundational-work/search_gov_spiders/search_gov_spiders/spiders/eggs
 
-/search_gov_spiders/search_gov_spiders/spiders/logs/search_gov_spiders/james_webb_spider
+/spider-foundational-work/search_gov_spiders/search_gov_spiders/spiders/logs/search_gov_spiders/james_webb_spider
 
-/search_gov_spiders/search_gov_spiders/spiders/twistd.pid
+/spider-foundational-work/search_gov_spiders/search_gov_spiders/spiders/twistd.pid
 
-/scrapy_urls
+/spider-foundational-work/scrapy_urls
 
-/search_gov_spiders/twistd.pid
+/spider-foundational-work/search_gov_spiders/twistd.pid
 
-/search_gov_spiders/scrapy_urls
+/spider-foundational-work/search_gov_spiders/scrapy_urls
 
-/search_gov_spiders/scrapyd_files/*
+/spider-foundational-work/search_gov_spiders/scrapyd_files/*
+
+/spider-foundational-work/search_gov_spiders/search_gov_spiders/__pycache__
