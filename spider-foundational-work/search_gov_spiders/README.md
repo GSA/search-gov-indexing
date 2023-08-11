@@ -1,9 +1,9 @@
 # Search_gov_spiders Info
 
-1. [Setup and Use](#setup-and-use)
+* [Setup and Use](#setup-and-use)
     * [Option 1: command-line](#option-1-straight-from-command-line) 
     * [Option 2: server](#option-2-deploying-on-server-scrapyd)
-2. [Adding New Spiders](#adding-new-spiders)
+* [Adding New Spiders](#adding-new-spiders)
 
 ## Setup and Use
 
