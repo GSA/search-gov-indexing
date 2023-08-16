@@ -8,7 +8,7 @@ import plistlib
 # Assign the file path to the Scrutiny plist
 plist_file_path = "scrutiny.plist"
 # Assign the file path to the desired text file for the URLs to be stored
-txt_file_path = "startingUrls-6-20.txt"
+txt_file_path = "startingUrls.txt"
 
 
 # Parses plist for startingURLs
