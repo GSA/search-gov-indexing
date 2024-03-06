@@ -81,15 +81,8 @@ class SearchGovSpidersDownloaderMiddleware:
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
 
-        # if "?" in request.url:
-        #     print(request.url, 'ignored')
-        #     return request.replace(url=urlparse(request.url))
-
         if urlparse(request.url).query:
             raise IgnoreRequest
-
-        # if '.php' in request.url:
-        #     spider.logger('Link with .php received:', request.url)
 
         return None
 
@@ -110,9 +103,6 @@ class SearchGovSpidersDownloaderMiddleware:
         # - return None: continue processing this exception
         # - return a Response object: stops process_exception() chain
         # - return a Request object: stops process_exception() chain
-
-        # if '.php' in request.url:
-        #     spider.logger('Excluded url:', request.url)
 
         pass
 

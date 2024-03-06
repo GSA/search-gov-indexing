@@ -2,7 +2,7 @@ version: '2.1'
 orbs:
   python: circleci/python@2.1.1
 jobs:
-  build:
+  build_and_test:
     executor: python/default
     steps:
       - checkout
@@ -11,16 +11,10 @@ jobs:
       - python/install-packages:
           pip-dependency-file: requirements.txt
           pkg-manager: pip
-#      - python/install-packages:
-#          args: pytest
-#          pkg-manager: pip
-#          pypi-cache: false
       - run:
-#          command: |
-#            pytest --version
           command: python -m unittest discover -s test -p "crawl_tests.py"
           name: Test
 workflows:
   main:
     jobs:
-      - build
+      - build_and_test
