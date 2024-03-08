@@ -7,8 +7,8 @@ import pandas as pd
 
 # to run, enter at the prompt: `python3 comparison.py`
 
-scrapy_urls_folder = '/scrapy_urls' # suf is short for scrapy_urls_folder
-scrutiny_urls_folder = '/scrutiny_urls/processed' # scUf is short for scrutiny_urls_folder
+scrapy_urls_folder = '/scrapy_urls'
+scrutiny_urls_folder = '/scrutiny_urls/processed'
 
 scrapy_paths = [scrapy_urls_folder + '/armymwr_urls.csv',
                 scrapy_urls_folder + '/james_webb_urls.csv',

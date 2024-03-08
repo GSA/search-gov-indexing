@@ -7,9 +7,8 @@ jobs:
     steps:
       - checkout
       - python/install-packages:
-          pkg-manager: pip
-      - python/install-packages:
-          pip-dependency-file: requirements.txt
+#          pip-dependency-file: requirements.txt
+          pip-dependency-file: ./spider-foundational-work/search_gov_spiders/requirements.txt
           pkg-manager: pip
       - run:
           command: python -m unittest discover -s test -p "crawl_tests.py"
