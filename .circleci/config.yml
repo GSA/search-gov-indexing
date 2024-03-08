@@ -7,7 +7,6 @@ jobs:
     steps:
       - checkout
       - python/install-packages:
-#          pip-dependency-file: requirements.txt
           pip-dependency-file: ./spider-foundational-work/search_gov_spiders/requirements.txt
           pkg-manager: pip
       - run:
