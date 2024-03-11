@@ -295,6 +295,7 @@ def crawl_es_index(es_client, index, start_date):
                 num_runs = 0
                 # collect_memory_stats()
                 print(str(datetime.datetime.now()), " Processed 10K Documents")
+                es_client.refresh(index = index)
             
             # Process documents
             modified_documents = []
