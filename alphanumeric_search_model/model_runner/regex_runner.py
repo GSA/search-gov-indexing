@@ -12,6 +12,7 @@ import signal
 import re
 import memory_profiler
 from elasticsearch import Elasticsearch
+from elasticsearch.helprs import parallel_bulk
 from guppy import hpy
 from memory_profiler import profile
 
@@ -221,7 +222,8 @@ def push_to_elasticsearch(es_client, index, documents):
     for document in documents:
         es_payload.append({"update" : {"_index": index, "_id": document["id"]}})
         es_payload.append({"doc" : {"alphanumeric_values": document["alphanumeric_vals"]}})
-    es_client.bulk(body=es_payload)
+    # es_client.bulk(body=es_payload)
+    parallel_bulk(client=es_client, actions = es_payload, max_chunk_bytes=50000000)
 
 def load_levenshtein_dictionary(file_name):
     levenshtein_dictionary = {}
