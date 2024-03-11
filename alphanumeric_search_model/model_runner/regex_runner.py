@@ -12,7 +12,7 @@ import signal
 import re
 import memory_profiler
 from elasticsearch import Elasticsearch
-from elasticsearch.helprs import parallel_bulk
+from elasticsearch.helpers import parallel_bulk
 from guppy import hpy
 from memory_profiler import profile
 
