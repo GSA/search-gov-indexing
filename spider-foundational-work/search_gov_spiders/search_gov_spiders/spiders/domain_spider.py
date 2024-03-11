@@ -15,8 +15,8 @@ with open(domains) as file:
 
 
 # scrapy command for crawling domain/site
-# scrapy crawl domain_spider -a desired_domain -a desired_url
-# ex: scrapy crawl domain_spider -a travel.dod.mil -a https://travel.dod.mil
+# scrapy crawl domain_spider -a domain=desired_domain -a urls=desired_url
+# ex: scrapy crawl domain_spider -a domain=travel.dod.mil -a urls=https://travel.dod.mil
 
 class DomainSpider(CrawlSpider):
     # name = "travelDodMil"
