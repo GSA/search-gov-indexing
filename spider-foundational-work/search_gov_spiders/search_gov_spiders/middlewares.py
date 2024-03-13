@@ -4,6 +4,8 @@
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
+from scrapy.exceptions import IgnoreRequest
+from urllib.parse import urlparse
 
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
@@ -78,6 +80,10 @@ class SearchGovSpidersDownloaderMiddleware:
         # - or return a Request object
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
+
+        if urlparse(request.url).query:
+            raise IgnoreRequest
+
         return None
 
     def process_response(self, request, response, spider):
@@ -97,6 +103,7 @@ class SearchGovSpidersDownloaderMiddleware:
         # - return None: continue processing this exception
         # - return a Response object: stops process_exception() chain
         # - return a Request object: stops process_exception() chain
+
         pass
 
     def spider_opened(self, spider):

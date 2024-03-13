@@ -1,3 +1,5 @@
+# exclude images, xml, gif, png, wmv, wav, ibooks, zip, jpg, jpeg, css, svg, img, mp3, mp4, cfm
+
 # Scrapy settings for search_gov_spiders project
 #
 # For simplicity, this file contains only settings considered important or
@@ -15,7 +17,7 @@ NEWSPIDER_MODULE = "search_gov_spiders.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "Search.gov-ScrapySpider"
+USER_AGENT = "usasearch"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -26,13 +28,13 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 0.2
+DOWNLOAD_DELAY = 1
 # The download delay setting will honor only one of:
-#CONCURRENT_REQUESTS_PER_DOMAIN = 16
+CONCURRENT_REQUESTS_PER_DOMAIN = 128
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -45,15 +47,15 @@ DOWNLOAD_DELAY = 0.2
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
-#    "armymwr.middlewares.ArmymwrSpiderMiddleware": 543,
-#}
+SPIDER_MIDDLEWARES = {
+   "search_gov_spiders.middlewares.SearchGovSpidersSpiderMiddleware": 543,
+}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    "search_gov_spiders.middlewares.SearchGovSpidersDownloaderMiddleware": 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   "search_gov_spiders.middlewares.SearchGovSpidersDownloaderMiddleware": 543,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -69,7 +71,7 @@ DOWNLOAD_DELAY = 0.2
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
-AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_ENABLED = False
 # The initial download delay
 # AUTOTHROTTLE_START_DELAY = 5
 # The maximum download delay to be set in case of high latencies
